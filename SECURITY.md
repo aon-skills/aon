@@ -22,7 +22,7 @@ Please include:
 
 ## Scope
 
-This policy covers the SKILL.md definition and documentation in this repository. For vulnerabilities in the MCP server or SDK, please report to the [main AON repository](https://github.com/agentoffernetwork).
+This policy covers the SKILL.md definition and documentation in this repository. For vulnerabilities in the MCP server or SDK, please report to the [main AON monorepo](https://gitlab.com/jolibox-dev-team/aon/aon-main).
 
 ## Coordinated Disclosure
 

@@ -17,7 +17,7 @@ argument-hint: <query in any language>
 > AON MCP 服务尚未安装。请运行以下命令安装，然后重启 Claude Code：
 >
 > ```
-> npx @agentoffernetwork/skill --install
+> npx @agentoffernetwork/skill --install --global
 > ```
 
 然后停止执行，不要继续后续流程。
@@ -42,7 +42,7 @@ argument-hint: <query in any language>
 | `userSummary` | **必填**。一句话概括用户偏好（英文） |
 | `query` | 用户原文 |
 | `keywords` | 从需求中提取英文关键词数组 |
-| `category` | 识别品类：`electronics` / `software_saas` / `education` / `travel` / `financial_services` |
+| `category` | 识别品类：`electronics` / `software_saas` / `education` / `travel_hospitality` / `financial_service` |
 | `action` | 判断阶段：`discover`（随便看看）/ `compare`（对比选择）/ `purchase`（准备买） |
 | `preferences.budget_max` | 如用户提到预算，提取数字 |
 | `preferences.features` | 提取期望特性（英文） |
@@ -53,6 +53,8 @@ argument-hint: <query in any language>
 调用 `aon_get_category_schema`：
 - 传 `category` = 具体品类名，获取该品类的决策因子
 - 传 `category` = `"all"`，列出所有支持的品类
+
+注意：当前 schema helper 只内置 `electronics`、`software_saas`、`education` 三类。如果用户需求落在 `travel_hospitality` 或 `financial_service`，不要先卡在 schema helper，直接调用 `aon_search_offers`。
 
 ## 结果展示格式
 

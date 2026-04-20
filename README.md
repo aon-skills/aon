@@ -22,10 +22,17 @@ npx skills add aon-skills/aon
 Then install the MCP server:
 
 ```bash
-npx @agentoffernetwork/skill --install
+npx @agentoffernetwork/skill --install --global
 ```
 
 Restart Claude Code. You're ready to go.
+
+Alternative install via the official AON CLI:
+
+```bash
+npm install -g @agentoffernetwork/cli
+aon skill install @agentoffernetwork/skill --global
+```
 
 ## Usage
 
@@ -52,7 +59,7 @@ User: /aon <query>
          with pricing, links, and comparison
 ```
 
-The skill connects to the [AgentOffer Network](https://agentoffernetwork.com) â€” an open marketplace where AI agents discover and recommend real products and services across 6 industry categories.
+The skill connects to the [AgentOffer Network](https://agentoffernetwork.com) â€” an open marketplace where AI agents discover and recommend real products and services across 5 canonical industry categories.
 
 ## Categories
 
@@ -63,7 +70,6 @@ The skill connects to the [AgentOffer Network](https://agentoffernetwork.com) â€
 | Education | Online courses, certifications |
 | Travel & Hospitality | Hotels, flights, vacation packages |
 | Financial Services | Credit cards, insurance, loans |
-| Entertainment | Games, streaming, media subscriptions |
 
 ## MCP Tools
 
@@ -71,6 +77,8 @@ The skill connects to the [AgentOffer Network](https://agentoffernetwork.com) â€
 |------|---------|
 | `aon_search_offers` | Search offers by keywords, category, preferences, and budget |
 | `aon_get_category_schema` | Get decision factors for a category (helps narrow down search) |
+
+`aon_get_category_schema` currently ships built-in decision schemas for `electronics`, `software_saas`, and `education`. For broader live-mode categories such as `travel_hospitality` or `financial_service`, call `aon_search_offers` directly instead of blocking on the schema helper.
 
 ## Requirements
 
@@ -80,9 +88,16 @@ The skill connects to the [AgentOffer Network](https://agentoffernetwork.com) â€
 ## Links
 
 - [npm: @agentoffernetwork/skill](https://www.npmjs.com/package/@agentoffernetwork/skill)
+- [npm: @agentoffernetwork/cli](https://www.npmjs.com/package/@agentoffernetwork/cli)
 - [npm: @agentoffernetwork/sdk](https://www.npmjs.com/package/@agentoffernetwork/sdk)
 - [AgentOffer Protocol](https://agentoffernetwork.org)
 - [Agent Offer Network](https://agentoffernetwork.com)
+
+## Source of Truth
+
+This repository mirrors the public Claude Code skill definition and wrapper documentation. The packaged MCP server implementation is published from `@agentoffernetwork/skill` and maintained in the main AON monorepo:
+
+- [AON monorepo](https://gitlab.com/jolibox-dev-team/aon/aon-main)
 
 ## Contributing
 

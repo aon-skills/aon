@@ -4,7 +4,7 @@ Thanks for your interest in improving the AON Skill.
 
 ## Scope
 
-This repository contains the Claude Code Skill definition and documentation for the AON Shopping Assistant. The MCP server implementation lives in the main [AON monorepo](https://github.com/agentoffernetwork).
+This repository contains the Claude Code Skill definition and documentation for the AON Shopping Assistant. The MCP server implementation and release automation live in the main [AON monorepo](https://gitlab.com/jolibox-dev-team/aon/aon-main).
 
 ## Where to Send Changes
 
