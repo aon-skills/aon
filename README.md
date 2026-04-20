@@ -1,7 +1,7 @@
 <p align="center">
-  <h1 align="center">AON â€” Claude Code Skill</h1>
+  <h1 align="center">AON â€” MCP Skill</h1>
   <p align="center">
-    Search the <a href="https://agentoffernetwork.com">Agent Offer Network</a> for product and service recommendations directly from Claude Code.
+    Search the <a href="https://agentoffernetwork.com">Agent Offer Network</a> for product and service recommendations from any MCP-compatible AI host.
   </p>
 </p>
 
@@ -25,7 +25,7 @@ Then install the MCP server:
 npx @agentoffernetwork/skill --install --global
 ```
 
-Restart Claude Code. You're ready to go.
+Restart your MCP host (Claude Code, Claude Desktop, Cursor, etc.). You're ready to go.
 
 Alternative install via the official AON CLI:
 
@@ -82,7 +82,7 @@ The skill connects to the [AgentOffer Network](https://agentoffernetwork.com) â€
 
 ## Requirements
 
-- [Claude Code](https://claude.ai/claude-code) with Skills support
+- Any MCP-compatible host (Claude Code, Claude Desktop, Cursor, Windsurf, etc.)
 - Node.js >= 18
 
 ## Links
@@ -95,7 +95,7 @@ The skill connects to the [AgentOffer Network](https://agentoffernetwork.com) â€
 
 ## Source of Truth
 
-This repository mirrors the public Claude Code skill definition and wrapper documentation. The packaged MCP server implementation is published from `@agentoffernetwork/skill` and maintained in the main AON monorepo:
+This repository mirrors the public MCP skill definition and wrapper documentation. The packaged MCP server implementation is published from `@agentoffernetwork/skill` and maintained in the main AON monorepo:
 
 - [AON monorepo](https://gitlab.com/jolibox-dev-team/aon/aon-main)
 
