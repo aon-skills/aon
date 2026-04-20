@@ -13,6 +13,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 - Document the official AON CLI install path alongside direct npm self-install
 - Point governance docs to the main AON monorepo instead of a generic GitHub org link
 - Clarify that the schema helper only covers the built-in demo categories
+- Add a dedicated GitHub release playbook for the public TypeScript skill wrapper
+- Default monorepo sync now updates both `aon` and `aon-python` public wrapper repos
+
+### Added
+
+- Add GitHub Actions workflows to validate the public wrapper surface and manually publish GitHub Releases
 
 ## [0.1.1] - 2026-04-16
 
