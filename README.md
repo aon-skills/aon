@@ -59,17 +59,39 @@ User: /aon <query>
          with pricing, links, and comparison
 ```
 
-The skill connects to the [AgentOffer Network](https://agentoffernetwork.com) â€” an open marketplace where AI agents discover and recommend real products and services across 5 canonical industry categories.
+The skill connects to the [AgentOffer Network](https://agentoffernetwork.com) and follows the canonical AON taxonomy defined here:
+
+- <https://github.com/agentoffernetwork/protocol/blob/main/specs/category-taxonomy.md>
+
+Current public categories:
+
+- `software_saas`
+- `travel_hospitality`
+- `education`
+- `financial_service`
+- `electronics`
+- `entertainment`
+- `health_beauty`
+- `fashion`
+- `food_grocery`
+- `home_garden`
+- `automotive`
 
 ## Categories
 
 | Category | Examples |
 |----------|----------|
-| Electronics | Headphones, laptops, wearables |
 | Software & SaaS | Project management, CRM, dev tools |
-| Education | Online courses, certifications |
 | Travel & Hospitality | Hotels, flights, vacation packages |
+| Education | Online courses, certifications |
 | Financial Services | Credit cards, insurance, loans |
+| Electronics | Headphones, laptops, wearables |
+| Entertainment | Games, streaming, AI companions, music, live content |
+| Health & Beauty | Skincare, supplements, cosmetics, wellness |
+| Fashion | Clothing, shoes, accessories, jewelry |
+| Food & Grocery | Meal kits, grocery delivery, snacks, beverages |
+| Home & Garden | Furniture, appliances, decor, smart home |
+| Automotive | Cars, lease, insurance, parts, EV charging |
 
 ## MCP Tools
 
@@ -78,7 +100,7 @@ The skill connects to the [AgentOffer Network](https://agentoffernetwork.com) â€
 | `aon_search_offers` | Search offers by keywords, category, preferences, and budget |
 | `aon_get_category_schema` | Get decision factors for a category (helps narrow down search) |
 
-`aon_get_category_schema` currently ships built-in decision schemas for `electronics`, `software_saas`, and `education`. For broader live-mode categories such as `travel_hospitality` or `financial_service`, call `aon_search_offers` directly instead of blocking on the schema helper.
+`aon_get_category_schema` currently ships built-in decision schemas for all 11 current canonical categories: `software_saas`, `travel_hospitality`, `education`, `financial_service`, `electronics`, `entertainment`, `health_beauty`, `fashion`, `food_grocery`, `home_garden`, and `automotive`.
 
 ## Requirements
 
